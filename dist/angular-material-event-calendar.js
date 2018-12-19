@@ -442,7 +442,8 @@ function mdEventCalendarBuilderService($$mdEventCalendarUtil, $templateCache) {
       cellHeader.appendChild(createLink);
     }
 
-    createEventElements(cellContent, options);
+    if(!options.differentMonth)
+      createEventElements(cellContent, options);
 
     return cell;
   }
